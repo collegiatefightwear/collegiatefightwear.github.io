@@ -14,7 +14,7 @@
     }
 
     body {
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      background: linear-gradient(135deg, #FAF9F6, #F2F0EF);
       color: white;
       min-height: 100vh;
       display: flex;
@@ -77,6 +77,52 @@
     .btn:hover {
       transform: translateY(-3px);
     }
+    .subscribe-box {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 30px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
+
+    .subscribe-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .subscribe-box p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .subscribe-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .subscribe-form input {
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      width: 280px;
+      max-width: 100%;
+      font-size: 1rem;
+    }
+
+    .subscribe-form button {
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: #4f46e5;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .subscribe-form button:hover {
+      transform: translateY(-2px);
+    }
 
     footer {
       text-align: center;
@@ -116,13 +162,51 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1>The ctandard for college branded fightwear</h1>
+      <h1>The standard for college branded fightwear</h1>
 
       <p>
        Future designs coming soon
       </p>
+      <form class="subscribe-form" onsubmit="subscribe(event)">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <button type="submit">Subscribe</button>
+        </form>
 
       <a href="#" class="btn">Get Started</a>
+    </div>
+  </section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Stay Updated</h1>
+
+      <p>
+        Subscribe to receive annoucements for new designs.
+      </p>
+
+      <div class="subscribe-box">
+        <h2>Join Our Mailing List</h2>
+
+        <p>Get updates directly in your inbox.</p>
+
+        <form class="subscribe-form" onsubmit="subscribe(event)">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <button type="submit">Subscribe</button>
+        </form>
+
+        <div id="message"></div>
+      </div>
     </div>
   </section>
 
