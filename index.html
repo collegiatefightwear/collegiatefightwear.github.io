@@ -14,7 +14,7 @@
     }
 
     body {
-      background: linear-gradient(135deg, #FAF9F6, #F2F0EF);
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
       color: white;
       min-height: 100vh;
       display: flex;
@@ -45,11 +45,12 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
     .hero-content {
       max-width: 700px;
+      width: 100%;
     }
 
     .hero h1 {
@@ -59,24 +60,10 @@
 
     .hero p {
       font-size: 1.2rem;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       line-height: 1.6;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background: white;
-      color: #4f46e5;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-    }
     .subscribe-box {
       background: rgba(255, 255, 255, 0.12);
       padding: 30px;
@@ -124,6 +111,11 @@
       transform: translateY(-2px);
     }
 
+    #message {
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -144,6 +136,15 @@
         flex-direction: column;
         gap: 10px;
       }
+
+      .subscribe-form {
+        flex-direction: column;
+      }
+
+      .subscribe-form input,
+      .subscribe-form button {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -151,48 +152,23 @@
 <body>
 
   <nav>
-    <div class="logo">MySite</div>
+    <div class="logo">Collegiate Fightwear</div>
 
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>The standard for college branded fightwear</h1>
-
-      <p>
-       Future designs coming soon
-      </p>
-      <form class="subscribe-form" onsubmit="subscribe(event)">
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            required
-          />
-
-          <button type="submit">Subscribe</button>
-        </form>
-
-      <a href="#" class="btn">Get Started</a>
-    </div>
-  </section>
+ 
   <section class="hero">
     <div class="hero-content">
       <h1>Stay Updated</h1>
 
       <p>
-        Subscribe to receive annoucements for new designs.
+        The standard for college branded fightwear.
       </p>
 
       <div class="subscribe-box">
         <h2>Join Our Mailing List</h2>
 
-        <p>Get updates directly in your inbox.</p>
+        <p>Receive a person email when new designs are ready.</p>
 
         <form class="subscribe-form" onsubmit="subscribe(event)">
           <input
